@@ -1,10 +1,10 @@
-# NOME DA IMAGEM BASE A SER UTILIZADA #
+# Imagem base a ser utilizada no container #
 FROM ubuntu
- 
-# ROTULO PARA A NOVA IMAGEM, IDENTIFICACAO DO DESENVOLVEDOR #
+
+# Identificação do Mantenedor/Desenvolvedor #
 LABEL maintainer="Jose Wellington"
  
-# EXECUCAO DOS COMANDOS DE AUTLIZACAO E INSTALACAO DE FERRAMENTAS #
+# Instalação de ferramentas e atualização do repositório #
 RUN apt-get update -y && apt-get upgrade -y
  
 RUN apt-get install vim -y
@@ -104,5 +104,5 @@ RUN chmod -Rf 774 /var/spool/squid
  
 RUN squid -z
  
-# DEFINICAO DA PORTA A SER EXPOSTA NO CONTAINER #
+# Exposição da porta de conexão ao container #
 EXPOSE 3128
