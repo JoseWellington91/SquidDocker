@@ -74,7 +74,7 @@ auth_param basic casesensitive off \n \
 acl autenticados proxy_auth REQUIRED \n \
 ## BLOQUEIA O ACESSO UNSAFE PORTS ## \n \
 http_access deny !Safe_ports \n \
-## Deny CONNECT to other than secure SSL port ## \n \
+## BLOQUEIA CONEXOES PARA OUTRA PORTA QUE NAO SEJA SSL SEGURA ## \n \
 http_access deny CONNECT !SSL_ports \n \
 ## SITES BLOQUEADOS ## \n \
 acl sites-bloqueados url_regex -i \"/etc/squid/regras/sites_bloqueados\" \n \
